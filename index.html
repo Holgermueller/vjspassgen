@@ -10,7 +10,21 @@
   <body>
     <header>Password Genearator</header>
     <section class="password-generator" id="passwordGenerator">
-      <div class="password-display" id="passwordDisplay"></div>
+      <textarea
+        class="password-display"
+        name="password-display"
+        id="passwordDisplay"
+        cols="30"
+        rows="10"
+      ></textarea>
+
+      <input type="radio" name="hasNumbers" id="hasNumbers" /><label
+        for="hasNumbers"
+        >Has numbers?</label
+      >
+      <input type="radio" name="hasChars" id="hasChars" />
+      <label for="hasChars">Has special characters?</label>
+
       <button
         class="generate-password"
         id="generatePassword"

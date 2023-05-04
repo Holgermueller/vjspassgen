@@ -4,3 +4,8 @@ html {
   margin: 0;
   background-color: skyblue;
 }
+
+.password-generator {
+  width: 50%;
+  margin: auto;
+}
