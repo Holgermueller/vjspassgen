@@ -9,19 +9,20 @@ const symbols = "!@#$%^&*_-+=";
 let chars = alpha;
 
 function generatePassword() {
-  let hasNum = document.getElementById("hasNumbers").value;
-  let hasChars = document.getElementById("hasChars").value;
-  let alphaLength = alpha.length;
-  let newPassword = "";
+  let length = document.getElementById("length").value;
 
-  if (hasNum.checked) {
-    console.log(true);
+  if (document.getElementById("hasChars").checked) {
+    chars += symbols;
   }
 
-  console.log(hasNum.checked, hasChars);
+  if (document.getElementById("hasNumbers").checked) {
+    chars += numbers;
+  }
 
-  for (let i = 0; i < 8; i++) {
-    newPassword += chars.charAt(Math.floor(Math.random() * alphaLength));
+  let newPassword = "";
+
+  for (let i = 0; i < length; i++) {
+    newPassword += chars.charAt(Math.floor(Math.random() * chars.length));
 
     document.getElementById("passwordDisplay").innerHTML = newPassword;
   }
