@@ -15,27 +15,42 @@
         name="password-display"
         id="passwordDisplay"
         cols="30"
-        rows="10"
+        rows="5"
+        placeholder="Password will appear here..."
       ></textarea>
+      <label for="password-display"></label>
+      <button
+        class="copy-to-clipboard"
+        id="copyToClipboard"
+        onclick="copyToClipboard()"
+      >
+        Copy to Clipboard
+      </button>
 
-      <input
-        type="checkbox"
-        name="hasNumbers"
-        value="hasNumbers"
-        id="hasNumbers"
-      /><label for="hasNumbers">Has numbers?</label>
+      <div class="input-container">
+        <input
+          type="checkbox"
+          name="hasNumbers"
+          value="hasNumbers"
+          id="hasNumbers"
+        /><label for="hasNumbers">Has numbers?</label>
+      </div>
 
-      <input type="checkbox" name="hasChars" value="hasChars" id="hasChars" />
-      <label for="hasChars">Has special characters?</label>
+      <div class="input-container">
+        <input type="checkbox" name="hasChars" value="hasChars" id="hasChars" />
+        <label for="hasChars">Has special characters?</label>
+      </div>
 
-      <input
-        type="number"
-        name="length"
-        id="length"
-        min="8"
-        value="8"
-        placeholder="8"
-      /><label for="length">Length</label>
+      <div class="input-container">
+        <input
+          type="number"
+          name="length"
+          id="length"
+          min="8"
+          value="8"
+          placeholder="8"
+        /><label for="length">Length</label>
+      </div>
 
       <button
         class="generate-password"

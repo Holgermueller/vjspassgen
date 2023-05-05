@@ -27,3 +27,13 @@ function generatePassword() {
     document.getElementById("passwordDisplay").innerHTML = newPassword;
   }
 }
+
+function copyToClipboard() {
+  let password = document.getElementById("passwordDisplay").innerHTML;
+  try {
+    navigator.clipboard.writeText(password);
+    console.log("Copied");
+  } catch (error) {
+    console.error("Copy failed: ", error);
+  }
+}
